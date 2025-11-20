@@ -6,7 +6,7 @@ fn main() {
     println!("Is Fish Tasty? {}", is_fish_tasty);
 
     /*
-         Remember that Rust is smart enough to understand that true and false values are boolean values, meaning that you don't have to specify the bool keyword:
+        Remember that Rust is smart enough to understand that true and false values are boolean values, meaning that you don't have to specify the bool keyword:
     */
 
     let is_programming_fun = true;
@@ -23,7 +23,7 @@ fn main() {
     let age = 20;
     let can_vote = age >= 18;
 
-    println!("Can vote? {}", can_vote)
+    println!("Can vote? {}", can_vote);
 
     /*
         Using Booleans in if Statements
