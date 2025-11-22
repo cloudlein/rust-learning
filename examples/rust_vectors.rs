@@ -41,7 +41,7 @@ fn main() {
     */
 
     fruits.pop();
-    println!("{:?}", fruits);
+    println!("{:?}", fruits); // ["apple", "banana", ,"orange"]
 
     /*
         Add or Remove Elements at a Specified Index
@@ -49,4 +49,40 @@ fn main() {
         Use insert() to add an item at a specified index:
     */
 
+    fruits.insert(1, "grape");
+    println!("{:?}", fruits); //  // ["apple", "grape" ,"banana", "orange"]
+
+    /*
+        Remove the First Item
+        Use remove() to remove an element from a specified index:
+    */
+
+    // remove banana
+    fruits.remove(2);
+    println!("{:?}", fruits); // ["apple", "grape" , "orange"]
+
+    // Note: Adding or removing elements from the beginning is slower than at the end, because all the other elements have to shift positions.
+
+    /*
+        Vector Length
+        You can find out how many elements there are in a vector using the .len() method:
+    */
+
+    println!("there are {} fruits", fruits.len());
+
+    /*
+        Loop Through a Vector
+        Just like arrays, you can use a for loop to go through all the values in a vector:
+    */
+
+    for fruit in &fruits {
+        println!("{}", fruit);
+    }
+
+    /*
+        Note: Use &fruits to borrow the vector instead of moving it.
+        In Rust, borrowing means using a reference to a value instead of taking ownership of it.
+        When you loop through a vector without &, the values are moved out, and you can no longer use the vector.
+        But when you borrow the vector using &, you can still use it later in your program.
+    */
 }
